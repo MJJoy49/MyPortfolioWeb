@@ -1,0 +1,644 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family:Georgia, serif; 
+    box-sizing: border-box;
+}
+
+body
+{
+    background: rgba(9, 1, 14, 0.809);
+    color: white;
+}
+#header
+{
+    width: 100%;
+    height: 100vh;
+    background-size: cover;
+    background-position: center;
+}
+
+.container{
+    padding: 10px 10%;
+ 
+
+}
+
+nav{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.logo{
+    width: 130px;
+	height: 120px;
+	
+	
+}
+
+
+
+nav ul li{
+    display: inline-block;
+    list-style: none;
+    margin: 10px 20px;
+}
+
+nav ul li a{
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+    position: relative;
+    font-weight:100;
+    transition: .5s;
+    padding: 5px;
+}
+nav ul li a:hover
+{
+    color: red;
+}
+
+nav ul li a::after{
+    content: "";
+    width: 0;
+    height: 3px;
+    background-color: white;
+    position: absolute;
+    left: 0;
+    bottom: -6px;
+    transition: .5s;
+}
+
+nav ul li a:hover::after{
+    width: 100%;
+}
+
+
+.git{
+    color: white;
+    text-decoration: none;
+    font-size: 20px;
+    font-weight: bolder;
+    padding: 10px;
+    border-radius: 10px;
+    font-size: 18px;
+    font-weight: bold;
+    background-color:transparent;
+    box-shadow: inset 2px 2px 5px  whitesmoke;
+    transition: all .2s;
+}
+
+
+.git:hover{
+       
+        background-color: red;
+        color: white;
+}
+    
+.headerText{
+    margin-top: 10%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.headerText h1 span{
+    font-size: 30px;
+    color: red;
+    
+}
+.headerText h1{
+    font-size: 60px;
+    margin-top: 10%;
+}
+
+.myPic{
+    border: solid white 10px;
+    border-radius: 50%;
+    height: 500px;
+    width: 500px;
+}
+
+
+
+/* ----------about-me--------- */
+
+#about{
+    padding: 80px 0;
+    color: rgba(227, 213, 213, 0.954);
+}
+.row{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.aboutCol-1{
+    flex-basis: 40%;
+}
+
+.aboutCol-1 img{
+    height: 100%;
+    width: 100%;
+    border-radius: 20px;
+}
+
+.aboutCol-2{
+    flex-basis: 50%;
+}
+
+.sub-title{
+    font-size: 50px;
+    font-weight: bold;
+    color: rgba(227, 213, 213, 0.954);;
+}
+
+
+.tab-title{
+    margin-top: 20px;
+    display: flex;
+    gap: 40px;
+    
+}
+
+
+.tab{
+    font-size: 18px;
+    position: relative;
+    cursor: pointer;
+    color: skyblue;
+    transition: .5s;
+}
+
+.tab:hover{
+    color: red;
+}
+
+.tab::after{
+    content: "";
+    width: 0;
+    height: 2px;
+    background-color: white;
+    position: absolute;
+    left: 0;
+    bottom: -8px;
+    transition: .5s;
+}
+
+.tab.activeTab::after{
+    width: 100%;
+}
+
+.displayflex{
+    display: flex;
+}
+
+#other{
+    margin-left: 50px;
+}
+
+.tab-details{
+    margin-top: 20px;
+    
+}
+
+
+.tab-details ul li{
+    list-style: none;
+    color: yellow;
+    margin: 5px 0;
+}
+
+.tab-details ul li span{
+    color: whitesmoke;
+}
+
+.tab-details{
+    display: none;
+}
+
+.tab-details.active-Tab{
+    display: block;
+}
+
+
+/* ------------portfolio--------- */
+
+
+.portfolio{
+    padding: 50px 0;
+}
+.workList{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-gap: 40px;
+    margin-top: 50px;
+
+}
+.work{
+    border-radius: 10px;
+    position: relative;
+    overflow: hidden;
+}
+.work img{
+    width: 100%;
+    border-radius: 10px;
+    display: block;
+    transition: transform 0.5s;
+
+}
+.leyer{
+    width: 100%;
+    height: 0;
+    background: linear-gradient(rgba(57, 56, 56, 0.6),#f04731e0);
+    border-radius: 10px;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    overflow: hidden;
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 0 40px;
+    text-align: center;
+    font-size: 14px;
+    border: 1px solid whitesmoke;
+    transition: height 0.5s;
+}
+
+.leyer h3{
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.leyer a{
+    margin-top: 20px;
+    border-radius: 50%;
+    background: white;
+    width: 40px;
+    height: 40px;
+    margin-left: 45%;
+    text-align: center;
+    text-decoration: none;
+    line-height: 40px;
+    color: black;
+    transition: transform 0.5s;
+}
+
+.leyer a:hover{
+    background: red;
+    transform: scale(1.1);
+    
+}
+
+.work:hover img{
+    transform: scale(1.1);
+}
+
+.work:hover .leyer{
+    height: 100%;
+
+}
+
+
+.btn2{
+    display: block;
+    margin: 50px auto;
+	padding: 15px;
+    font-size: 14px;
+    text-align: center;
+    width: fit-content;
+	border-radius: 40px;
+	box-shadow: -2px -2px 8px rgb(119, 118, 118);
+	font-weight: bold;
+	transition: all .2s;
+    cursor: pointer;
+}
+
+
+.btn2:hover{
+
+	background-color: red;
+	box-shadow: 0px 0px 0px transparent;
+}
+
+
+ /* --------------ring-------------  */
+
+
+ .rings{
+	display: flex;
+
+}
+.ring{
+	margin-left: 5.33%;
+	width: 30px;
+	height: 2px;
+	background-color: black;
+	margin-top: 50px;
+	animation: ani 5s  infinite;
+	box-shadow: 0 5px 10px black;
+
+}
+
+@keyframes ani
+ {
+  0%   {background-color:red; }
+  25%  {background-color:black; }
+  50%  {background-color:blue; }
+  75%  {background-color:green; }
+  100% {background-color:red;}
+}
+
+
+/* ----------------contact---------- */
+
+.contactLaft{
+    flex-basis: 35%;
+    margin-top: 30px;
+
+}
+
+.contactright{
+    flex-basis: 60%;
+}
+
+.contactLaft p i{
+    margin-right: 10px;
+    font-size: 20px;
+    
+}
+.contactLaft p{
+    margin-top: 30px;
+    color: yellowgreen;
+}
+
+
+.socialM{
+    margin-top: 30px;
+
+}
+.socialM a{
+    margin-top: 10px;
+    text-decoration: none;
+    font-size: 25px;
+    margin-right: 15px;
+    color: skyblue;
+    display: inline-block;
+    transition: transform .5s;
+}
+.socialM a:hover{
+    color: red;
+    transform: translateY(-5px);
+}
+
+.contactright{
+    width: 100%;
+}
+
+form input, form textarea{
+    width: 100%;
+    border: 0;
+    outline: none;
+    background: #232323;
+    padding: 15px;
+    margin: 15px 0;
+    color: whitesmoke;
+    font-size: 18px;
+    border-radius: 5px;
+}
+
+.btn3{
+    display: block;
+    outline: none;
+	padding: 15px 60px;
+    font-size: 16px;
+    text-align: center;
+    width: fit-content;
+	border-radius: 10px;
+	color: white;
+	font-weight: bold;
+    background: #232323;
+    box-shadow: inset 1px 1px 5px  rgb(12, 12, 12);
+	transition: all .2s;
+    cursor: pointer;
+    border: 1px solid black;
+}
+
+.btn3:hover{
+
+	background-color: green;
+	
+}
+
+
+
+.end{
+    margin-top: 50px;
+    text-align: center;
+    padding: 20px 0;
+    background: black;
+    font-weight: 300;
+    width: 100%;
+
+}
+
+.end h6{
+    color: antiquewhite;
+}
+
+.end h6 a{
+    color: antiquewhite;
+    text-decoration: none;
+}
+
+.updown{
+    text-decoration: none;
+    color: skyblue;
+    
+    font-size: 30px;
+    text-align: end;
+    transition: transform .5s;
+
+}
+
+.updown:hover{
+    color: red;
+    transform: translateY(-5px);
+}
+
+
+
+/* ------------------------css--for-small-screeen-------- */
+.aboutCol-1phn{
+    display: none;
+}
+.git2{
+    display: none;
+}
+nav .fas{
+    display: none;
+}
+@media only screen and (max-width: 600px) {
+
+   
+   
+.logo{
+    width: 100px;
+	height: 90px;
+	
+	
+}
+
+    
+    .headerText{
+        margin-top: 10%;
+        display: block;
+        text-align: center;
+    }
+    
+    .headerText h1 span{
+        font-size: 20px;
+        color: red;
+        text-align: center;
+        
+    }
+    .headerText h1{
+        font-size: 40px;
+        margin-top: 5%;
+    }
+    
+    .myPic{
+        border: solid white 10px;
+        border-radius: 50%;
+        height: 200px;
+        width: 200px;
+        
+    }
+
+    .git{
+        display: none;
+    }
+
+
+    
+    nav .fas{
+        margin-top: -45px;
+        display: block;
+        font-size: 25px;
+        cursor: pointer;
+    }
+
+    nav ul{
+        border-radius: 8px;
+        background: burlywood;
+        position: fixed;
+        padding-top: 50px;
+        height: 100vh;
+        top: 0;
+        right: -200px;
+        width: 200px;
+        z-index: 2;
+        transition: right 0.5s;
+
+    }
+
+    nav ul li{
+        
+        display: block;
+        margin: 25px;
+        
+        
+    }
+
+    nav ul li a{
+        
+        
+        color: black;
+    }
+
+    nav ul .fas{
+        
+        margin-top: -160%;
+        margin-left: 15px;
+        cursor: pointer;
+        color: black;
+    }
+
+
+
+
+
+    .sub-title{
+        font-size: 40px;
+        text-align: center;
+        
+    }
+    .aboutCol-1phn{
+        display: block;
+        margin-bottom: 30px;
+        text-align: center;
+        
+    }
+
+    .aboutCol-1phn img{
+        height: 200px;
+        width: 200px;
+        border-radius: 20px;
+        
+    }
+
+    .aboutCol-1phn , .aboutCol-2{
+        flex-basis: 100%;
+
+    }
+
+    .aboutCol-1 img{
+        display: none;
+    }
+    .aboutCol-2 .sub-title{
+        text-align: center;
+    }
+
+  
+
+
+
+    .git2{
+        display: block;
+        color: rgb(22, 3, 3);
+        text-decoration: none;
+        font-size: 16px;
+        font-weight: bolder;
+        width: 50%;
+        margin-left: 10px;
+        padding: 10px;
+        border-radius: 10px;
+        text-align: center;
+        font-size: 18px;
+        font-weight: bold;
+        background-color:transparent;
+        box-shadow: inset 2px 2px 5px  whitesmoke;
+        transition: all .2s;
+    }
+    
+    
+    .git2:hover{
+           
+            background-color: red;
+            color: white;
+    } 
+
+
+
+
+.contactright form input{
+    width: 100%;
+}
+
+
+
+    
+}
